@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <main class="py-5">
+        <div class="title d-flex justify-content-center align-items-center mb-5">
+
+            <h1>Bookmarker</h1>
+
+        </div>
+
+        <div class="bookmark-content w-75 mx-auto p-3 py-4 ">
+            <div class="content-text d-flex justify-content-center ">
+                <i class="fa-solid fa-bookmark fs-3 me-2 special-color pt-1"></i>
+                <h2 class="text-center mb-4 special-color "> Bookmark your favorite sites </h2>
+                <i class="fa-solid fa-bookmark fs-3 ms-2 special-color pt-1"></i>
+            </div>
+            <div class="form-group  ">
+                <label for="siteName" class="pb-2 fw-semibold">
+                    <i class="fa-solid fa-book-bookmark fa-fw pe-2"></i>Site Name</label>
+                <input type="text" id="siteName" placeholder="Bookmark Name" class="form-control is-invalid mb-4">
+                <label for="Website" class="pb-2 fw-semibold">
+                    <i class="fa-solid fa-link fa-fw pe-4"></i>Site URL</label>
+                <input type="text" id="Website" placeholder="Website URL" class="form-control mb-4">
+                <div class="button d-flex justify-content-center align-items-center ">
+                    <button class="btn btn-submit px-5 ">Submit</button>
+                    <button class="btn btn-update btn-warning px-5 d-none ">Update</button>
+                </div>
+            </div>
+        </div>
+        <table class="table mt-4 w-75 text-center mx-auto ">
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </thead>
+            <tbody class="tbody">
+            </tbody>
+        </table>
+        <div class="light-box-container d-none align-items-center justify-content-center position-fixed ">
+            <div class="warning-box bg-white p-3 rounded-2 position-relative w-50">
+                <div class="header d-flex mb-4 align-items-center pt-3 ">
+                    <div class="circles d-flex">
+                        <span class="d-block rounded-circle bg-danger me-2"></span>
+                        <span class="d-block rounded-circle bg-warning me-2"></span>
+                        <span class="d-block rounded-circle bg-success me-2"></span>
+                    </div>
+                    <i class="fa-solid fa-xmark fs-4 position-absolute close"></i>
+                </div>
+                <div class="box-content">
+                    <p>Site Name or Url is not valid, Please follow the rules below :</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa-regular fa-circle-right pe-2 "></i>
+                            Site name must contain at least 3 characters</li>
+                        <li><i class="fa-regular fa-circle-right pe-2"></i>
+                            Site URL must be a valid one</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
