@@ -13,7 +13,7 @@ if (localStorage.getItem("book") != null) {
 }
 
 function addBookmark() {
-    if (validateData() == true) {
+    if (validateData()) {
         var bookmark = {
             siteName: siteName.value,
             website: url.value,
@@ -21,21 +21,16 @@ function addBookmark() {
         bookmarkList.push(bookmark);
         console.log(bookmarkList);
         displayBooks(bookmarkList);
-        localStorage.setItem("book", JSON.stringify(bookmarkList))
+        localStorage.setItem("book", JSON.stringify(bookmarkList));
         clear();
-
     } else {
-        submit.addEventListener("click", function (e) {
-            lightBox.classList.replace("d-none", "d-flex");
-            closeBox.addEventListener("click", close)
-
-            lightBox.addEventListener("click", close)
-
-
-        })
+        lightBox.classList.replace("d-none", "d-flex");
+        closeBox.addEventListener("click", close);
+        lightBox.addEventListener("click", close);
     }
-
 }
+
+
 
 submit.addEventListener("click", function (e) {
     addBookmark();
